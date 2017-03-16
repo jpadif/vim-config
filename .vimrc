@@ -2,6 +2,9 @@
 map <F2> :bp<CR>
 map <F3> :bn<CR>
 
+" Disable beeps
+:set vb t_vb=
+
 " Pathogen
 execute pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
@@ -9,7 +12,7 @@ syntax on
 filetype plugin indent on
 
 " Molokai settings 
-colorscheme molokai
+colorscheme gruvbox 
 let g:molokai_original = 0
 let g:rehash256 = 1
 set background=dark
@@ -18,7 +21,8 @@ set nowrap
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-set guifont=Inconsolata\ for\ Powerline\ Medium\ 11
+set guifont=Inconsolata-g\ for\ Powerline:h11
+" set guifont=Inconsolata-g\ for\ Powerline\ Medium\ 11
 let g:Powerline_symbols = 'fancy'
 
 
@@ -66,7 +70,7 @@ let mapleader = ","
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-
+let g:ctrlp_show_hidden = 1
 
 " Hide mode on status bar
 set noshowmode
